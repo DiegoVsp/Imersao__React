@@ -1,5 +1,6 @@
 .Logo {
-  max-width: 168px;
+  /* max-width: 168px; */
+  max-width: 220px;
 }
 @media (max-width: 800px) {
   .Logo {
