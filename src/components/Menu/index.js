@@ -10,11 +10,11 @@ function Menu() {
   return (
     <nav className="Menu">
       {/* muda de href="" para to="" */}
-      <a to="/">
+      <Link to="/">
         <img className="Logo" src={Logo} alt="AluraFlix logo" />
-      </a>
+      </Link>
 
-      <Button as={Link} className="ButtonLink" to="/cadastro/Video">
+      <Button as={Link} className="ButtonLink" to="/cadastro/video">
         Novo vídeo
       </Button>
     </nav>
