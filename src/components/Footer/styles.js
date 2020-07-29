@@ -10,7 +10,15 @@ export const FooterBase = styled.footer`
   padding-bottom: 32px;
   color: var(--white);
   text-align: center;
+
+  .Logo{
+    max-width: 220px;    
+  }
+
   @media (max-width: 800px) {
+    .Logo{
+      max-width: 150px;
+    }
     margin-bottom: 50px;
   }
 `;
