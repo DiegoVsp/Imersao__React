@@ -16,7 +16,6 @@ const Main = styled.main`
 
 function PageDefault({children}) {
   return(
-    // todo componente precisa de uma estrutura em volta
     <>
       <Menu/>
       <Main>

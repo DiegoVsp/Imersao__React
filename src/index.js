@@ -7,7 +7,6 @@ import Home from '../src/pages/Home/index';
 import CadastroVideo from './pages/cadastro/Video'
 import CadastroCategoria from './pages/cadastro/Categoria'
 
-// desafio
 const Pag404 = () => (<div>Página 404</div>)
 
 
