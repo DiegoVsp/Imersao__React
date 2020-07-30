@@ -8,7 +8,7 @@ function CadastroCategoria() {
   const valoresIniciais = {
     nome: '',
     descricao: '',
-    cor: '#000',
+    cor: '',
   };
   const [categorias, setCategorias] = useState([]);
   const [values, setValues] = useState(valoresIniciais);
@@ -36,10 +36,16 @@ function CadastroCategoria() {
      :'https://imersaoreact.herokuapp.com/categorias';
      fetch(URL)
      .then(async (respostaServidor) =>{
-     const resposta = await respostaServidor.json();
-     setCategorias([...resposta,])
-   });
-  });
+      if (respostaServidor.ok) {
+        const resposta = await respostaServidor.json();
+        setCategorias([...resposta])
+        return;
+      }
+      throw new Error('Dados não encontrados');
+    });
+}, []);
+    
+  
   
   return (
     <PageDefault>
