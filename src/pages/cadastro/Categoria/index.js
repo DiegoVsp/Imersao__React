@@ -31,7 +31,9 @@ function CadastroCategoria() {
 
   useEffect(()=> {
     console.log('alo')
-     const URL = 'http://localhost:8000/categorias';
+     const URL = window.location.hostname.includes('localhost')
+     ?'http://localhost:8000/categorias'
+     :'https://imersaoreact.herokuapp.com/categorias';
      fetch(URL)
      .then(async (respostaServidor) =>{
      const resposta = await respostaServidor.json();
