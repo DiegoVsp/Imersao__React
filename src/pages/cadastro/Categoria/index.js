@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
+import Button from '../../../components/Button';
 
 function CadastroCategoria() {
   const valoresIniciais = {
@@ -28,7 +29,16 @@ function CadastroCategoria() {
 
 
 
-
+  useEffect(()=> {
+    console.log('alo')
+     const URL = 'http://localhost:8000/categorias';
+     fetch(URL)
+     .then(async (respostaServidor) =>{
+     const resposta = await respostaServidor.json();
+     setCategorias([...resposta,])
+   });
+  });
+  
   return (
     <PageDefault>
       <h1>Cadastro de Categoria:{values.nome}</h1>
@@ -55,23 +65,12 @@ function CadastroCategoria() {
         <div>
           <FormField
             label="Descrição"
-            type="text"
+            type="textarea"
             value={values.descricao}
             name="descricao"
             onChange={HandleChange}
           />
-        </div>
-
-        {/* <div>
-          <label>
-            Descrição
-          <textarea type="text"
-              value={values.descricao}
-              name="descricao"
-              onChange={HandleChange} />
-          </label>
-        </div> */}
-
+        </div>      
 
         <div>
           <FormField
@@ -83,25 +82,20 @@ function CadastroCategoria() {
           />
         </div>
 
-        {/* <div>        
-          <label>
-            Cor
-          <input type="color"
-              value={values.cor}
-              name="cor"
-              onChange={HandleChange} />
-          </label>
-        </div> */}
-
-        <button>
+        <Button>
           Cadastrar
-      </button>
+        </Button>
       </form>
 
+      {categorias.length === 0 && (
+        <div>
+          Loading...
+        </div>
+      ) }
       <ul>
-        {categorias.map((categoria, indice) => {
+        {categorias.map((categoria) => {
           return (
-            <li key={`${categoria}${indice}`}>
+            <li key={`${categoria.nome}`}>
               {categoria.nome}
             </li>
           )
