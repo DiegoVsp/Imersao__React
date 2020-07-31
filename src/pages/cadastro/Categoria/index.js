@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import useForm from '../../../hooks/useForm'
+
 
 function CadastroCategoria() {
   const valoresIniciais = {
@@ -10,24 +12,9 @@ function CadastroCategoria() {
     descricao: '',
     cor: '',
   };
+  const {HandleChange, values, clearForm} = useForm(valoresIniciais);
+
   const [categorias, setCategorias] = useState([]);
-  const [values, setValues] = useState(valoresIniciais);
-
-
-  function setValue(chave, valor) {
-    setValues({
-      ...values,
-      [chave]: valor,
-    })
-  }
-  function HandleChange(infosDoEvento) {
-    setValue(
-      infosDoEvento.target.getAttribute('name'),
-      infosDoEvento.target.value
-    );
-  }
-
-
 
   useEffect(()=> {
     console.log('alo')
@@ -35,17 +22,13 @@ function CadastroCategoria() {
      ?'http://localhost:8000/categorias'
      :'https://imersaoreact.herokuapp.com/categorias';
      fetch(URL)
-     .then(async (respostaServidor) =>{
-      if (respostaServidor.ok) {
-        const resposta = await respostaServidor.json();
-        setCategorias([...resposta])
-        return;
-      }
-      throw new Error('Dados não encontrados');
+     .then(async (respostaDoServidor) => {
+      const resposta = await respostaDoServidor.json();
+      setCategorias([
+        ...resposta,
+      ]);
     });
 }, []);
-    
-  
   
   return (
     <PageDefault>
@@ -58,7 +41,7 @@ function CadastroCategoria() {
           values
         ]);
 
-        setValues(valoresIniciais)
+        clearForm();
       }}>
         <div>
           <FormField
@@ -74,8 +57,8 @@ function CadastroCategoria() {
           <FormField
             label="Descrição"
             type="textarea"
-            value={values.descricao}
             name="descricao"
+            value={values.descricao}
             onChange={HandleChange}
           />
         </div>      
@@ -84,8 +67,8 @@ function CadastroCategoria() {
           <FormField
             label="Cor"
             type="color"
-            value={values.cor}
             name="cor"
+            value={values.cor}
             onChange={HandleChange}
           />
         </div>
@@ -103,8 +86,8 @@ function CadastroCategoria() {
       <ul>
         {categorias.map((categoria) => {
           return (
-            <li key={`${categoria.nome}`}>
-              {categoria.nome}
+            <li key={`${categoria.titulo}`}>
+              {categoria.titulo}
             </li>
           )
         })}

@@ -2,13 +2,13 @@
   "categorias": [
     {
       "id":1,
-      "nome": "Front-End",
+      "titulo": "Front-End",
       "descricao": "Uma categoria",
       "cor":"#cbd1FF"
     },
     {
       "id":2,
-      "nome": "Back-End",
+      "titulo": "Back-End",
       "descricao": "Outra categoria",
       "cor":"#cbd1FF"
     }
