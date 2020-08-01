@@ -1,18 +1,19 @@
 {
   "categorias": [
     {
-      "titulo": "Calistenia",
-      "descricao": "Calistenia: o Básico",
-      "cor": "#f78072",
+      "titulo": "Mais Assistidos",
+      "descricao": "Os filmes mais assitidos pelos usuários",
+      "cor": "#333",
       "id": 1
     }    
   ],
   "videos": [
-    {
-      "id": 1,
-      "categoriaId": 1,
-      "titulo": "Treino em Casa para fazer com a família",
-      "url": "https://www.youtube.com/watch?v=_pqIAzxMe4s"
+    {      
+        "id":1,
+        "categoriaId":1,
+        "titulo": "CEMITÉRIO MALDITO",
+        "url": "https://www.youtube.com/watch?v=VllcgXSIJkE"
+      
     }   
   ]
 }
