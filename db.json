@@ -1,16 +1,18 @@
 {
   "categorias": [
     {
-      "id":1,
-      "titulo": "Front-End",
-      "descricao": "Uma categoria",
-      "cor":"#cbd1FF"
-    },
+      "titulo": "Calistenia",
+      "descricao": "Calistenia: o Básico",
+      "cor": "#f78072",
+      "id": 1
+    }    
+  ],
+  "videos": [
     {
-      "id":2,
-      "titulo": "Back-End",
-      "descricao": "Outra categoria",
-      "cor":"#cbd1FF"
-    }
+      "id": 1,
+      "categoriaId": 1,
+      "titulo": "Treino em Casa para fazer com a família",
+      "url": "https://www.youtube.com/watch?v=_pqIAzxMe4s"
+    }   
   ]
 }

@@ -1,60 +1,64 @@
-import React,{useEffect} from 'react';
-import Menu from '../../components/Menu'
-import dadosIniciais from '../../data/dados_iniciais.json';
+import React, { useEffect, useState } from 'react';
+// import dadosIniciais from '../../data/dados_iniciais.json';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
-import Footer from '../../components/Footer';
-import categoriasRepository from '../../repositories/categorias'
-
+import PageDefault from '../../components/PageDefault';
+import categoriasRepository from '../../repositories/categorias';
 
 function Home() {
-  useEffect(()=> {
-  categoriasRepository.getAllWithVideos()
-    .then((categoriasComVideos) => {
-      console.log(categoriasComVideos);
-    })
-    .catch((err) => {
-      console.log(err.message);
-    })
-});
+  const [dadosIniciais, setDadosIniciais] = useState([]);
+
+  useEffect(() => {
+    categoriasRepository.getAllWithVideos()
+      .then((categoriasComVideos) => {
+        console.log(categoriasComVideos[0].videos[0]);
+        setDadosIniciais(categoriasComVideos);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }, []);
 
   return (
-    <div style={{ background: "#141414" }}>
-      <Menu />
+    <PageDefault paddingAll={0}>
+      {dadosIniciais.length === 0 && (<div>Loading...</div>)}
+      {dadosIniciais.length >= 1 && (
+        
+            <>
+              <BannerMain
+                videoTitle={dadosIniciais[0].videos[0].titulo}
+                url={dadosIniciais[0].videos[0].url}
+                videoDescription={dadosIniciais[0].videos[0].description}
+              />
+              <Carousel
+                ignoreFirstVideo
+                category={dadosIniciais[0]}
+              />
+            </>
+      )}
 
-      <BannerMain
+      {/* <BannerMain
         videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
         url={dadosIniciais.categorias[0].videos[0].url}
-        videoDescription={"Uma série de acontecimentos estranhos se inicia após a morte do gato da família Creed. Aos poucos eles percebem que um antigo cemitério, que fica nos fundos da casa, pode ter ligação com esses eventos."} /*descrição banner*/
+        videoDescription="O que"
       />
-
       <Carousel
         ignoreFirstVideo
         category={dadosIniciais.categorias[0]}
       />
-
       <Carousel
         category={dadosIniciais.categorias[1]}
       />
-
       <Carousel
         category={dadosIniciais.categorias[2]}
-      />      
-
+      />
       <Carousel
         category={dadosIniciais.categorias[3]}
-      />      
-
+      />
       <Carousel
         category={dadosIniciais.categorias[4]}
-      />      
-
-      <Carousel
-        category={dadosIniciais.categorias[5]}
-      />      
-
-      <Footer />
-    </div>
+      /> */}
+    </PageDefault>
   );
 }
 
