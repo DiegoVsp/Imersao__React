@@ -63,7 +63,6 @@ const Input = styled.input`
     }
   `}
 `;
-
 function FormField({
   label, type, name, value, onChange, suggestions,
 }) {
