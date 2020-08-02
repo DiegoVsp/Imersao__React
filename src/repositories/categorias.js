@@ -2,7 +2,16 @@ import config from '../config'
 
 const URL_CATEGORIES = `${config.URL_BACKEND}categorias`;
 
-function getAll() {
+function criarNovaCategoria(categoria){
+  return fetch(`${URL_CATEGORIES}`,{
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify(categoria)
+  })
+}
+ function getAll() {
   return fetch(`${URL_CATEGORIES}`)
   .then(async (respostaDoServidor) => {
     
@@ -15,10 +24,9 @@ function getAll() {
 }
 
 
-function getAllWithVideos() {
+ function getAllWithVideos() {
   return fetch(`${URL_CATEGORIES}?_embed=videos`)
-  .then(async (respostaDoServidor) => {
-    
+  .then(async (respostaDoServidor) => {    
     if(respostaDoServidor.ok){
       const resposta = await respostaDoServidor.json();
       return resposta;
@@ -29,5 +37,6 @@ function getAllWithVideos() {
 
 export default {
   getAllWithVideos,
-  getAll
+  getAll,
+  criarNovaCategoria,
 };

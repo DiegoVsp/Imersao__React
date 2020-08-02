@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import useForm from '../../../hooks/useForm';
+import categoriasRepository from '../../../repositories/categorias'
 
 function CadastroCategoria() {
+  const history = useHistory();
   const valoresIniciais = {
     nome: '',
     descricao: '',
     cor: '',
   };
-
   const { HandleChange, values, clearForm } = useForm(valoresIniciais);
-
   const [categorias, setCategorias] = useState([]);
 
   useEffect(() => {
@@ -43,10 +43,17 @@ function CadastroCategoria() {
           ...categorias,
           values,
         ]);
-
-        clearForm();
-      }}
-      >
+        categoriasRepository.criarNovaCategoria({
+          titulo:values.titulo,
+          descricao: values.descricao,
+          cor:values.cor,
+        })
+        .then(()=> {
+          console.log('Cadastrou com sucesso')
+          history.push('/')
+          clearForm();
+        }) 
+      }}>
 
         <FormField
           label="Nome da Categoria"
