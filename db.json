@@ -2,21 +2,53 @@
   "categorias": [
     {
       "id": 1,
-      "titulo": "Criaturas",
-      "descricao": "os melhores filmes com as criaturas mais estranhas e sinistras que você já viu.",
-      "cor": "#333"
+      "titulo": "Filmes",
+      "descricao": "Filmes sendo assistidos",
+      "cor": "#cc0b0b",
+      "link_extra": {
+        "text": "Recentemente assistidos",
+        "url": "https://www.alura.com.br/cursos-online-programacao"
+      }
     },
     {
       "id": 2,
-      "titulo": "Vale a pena?",
-      "descricao": "análise dos filmes lançados",
-      "cor": "#333"
+      "titulo": "Criticas",
+      "descricao": "",
+      "cor": "#cc0b0b",
+      "link_extra": {
+        "text": "Cursos de Back End na Alura",
+        "url": "https://www.alura.com.br/cursos-online-programacao"
+      }
     },
     {
       "id": 3,
-      "titulo": "Será?",
-      "descricao": "os relatos mais sinistros que ja ouviu.",
-      "cor": "#333"
+      "titulo": "Games",
+      "descricao": "",
+      "cor": "#cc0b0b",
+      "link_extra": {
+        "text": "Cursos de Back End na Alura",
+        "url": "https://www.alura.com.br/cursos-online-programacao"
+      }
+    },
+    {
+      "id": 4,
+      "titulo": "Relatos",
+      "descricao": "",
+      "cor": "#cc0b0b",
+      "link_extra": {
+        "text": "Cursos de Back End na Alura",
+        "url": "https://www.alura.com.br/cursos-online-programacao"
+      }
+    },
+    {
+      "id": 5,
+      "titulo": "Recomendados",
+      "descricao": "",
+      "cor": "#cc0b0b",
+      "link_extra": {
+        "text": "Cursos de Back End na Alura",
+        "url": "https://www.alura.com.br/cursos-online-programacao"
+      }
     }
   ],
   "videos": [
@@ -167,6 +199,12 @@
       "url": "https://www.youtube.com/watch?v=BkEk7C14ONE",
       "categoriaId": 1,
       "id": 24
+    },
+    {
+      "titulo": "Thiago Ventura I Especial Isso é Tudo Que Eu Tenho",
+      "url": "https://www.youtube.com/watch?v=Q3MRZKW2Llk",
+      "categoriaId": 4,
+      "id": 25
     }
   ]
 }
