@@ -1,33 +1,32 @@
 {
-  "categorias": [
-    {
+  "categorias": [{
       "id": 1,
       "titulo": "Filmes",
-      "descricao": "Filmes sendo assistidos",
+      "descricao": "",
       "cor": "#cc0b0b",
       "link_extra": {
-        "text": "Recentemente assistidos",
-        "url": "https://www.alura.com.br/cursos-online-programacao"
+        "text": "Os mais assistidos",
+        "url": "#"
       }
     },
     {
       "id": 2,
-      "titulo": "Criticas",
+      "titulo": "Gameplays",
       "descricao": "",
       "cor": "#cc0b0b",
       "link_extra": {
-        "text": "Cursos de Back End na Alura",
-        "url": "https://www.alura.com.br/cursos-online-programacao"
+        "text": "Só os melhores",
+        "url": "#"
       }
     },
     {
       "id": 3,
-      "titulo": "Games",
+      "titulo": "Entenda",
       "descricao": "",
       "cor": "#cc0b0b",
       "link_extra": {
-        "text": "Cursos de Back End na Alura",
-        "url": "https://www.alura.com.br/cursos-online-programacao"
+        "text": "Entenda a historia",
+        "url": "#"
       }
     },
     {
@@ -36,23 +35,12 @@
       "descricao": "",
       "cor": "#cc0b0b",
       "link_extra": {
-        "text": "Cursos de Back End na Alura",
-        "url": "https://www.alura.com.br/cursos-online-programacao"
-      }
-    },
-    {
-      "id": 5,
-      "titulo": "Recomendados",
-      "descricao": "",
-      "cor": "#cc0b0b",
-      "link_extra": {
-        "text": "Cursos de Back End na Alura",
-        "url": "https://www.alura.com.br/cursos-online-programacao"
+        "text": "O que o povo conta",
+        "url": "#"
       }
     }
   ],
-  "videos": [
-    {
+  "videos": [{
       "id": 1,
       "categoriaId": 1,
       "titulo": "CEMITÉRIO MALDITO",
@@ -61,150 +49,104 @@
     {
       "id": 2,
       "categoriaId": 1,
-      "titulo": "CEMITÉRIO MALDITO",
+      "titulo": "Cemitério Maldito",
       "url": "https://www.youtube.com/watch?v=VllcgXSIJkE"
     },
     {
       "id": 3,
-      "categoriaId": 2,
-      "titulo": "TOURIST TRAP - UM FILME BIZARRO E ESSENCIAL",
-      "url": "https://www.youtube.com/watch?v=_8P1l7wX2oM"
+      "categoriaId": 1,
+      "titulo": "Invocação do Mal 2",
+      "url": "hhttps://www.youtube.com/watch?v=5gN2uH3EJFU"
     },
     {
       "id": 4,
-      "categoriaId": 3,
-      "titulo": "SÓ RELATOS DE LOBISOMENS (PRINCIPALMENTE NA QUARESMA!) - COLETÂNEA TEMÁTICA",
-      "url": "https://www.youtube.com/watch?v=J5s3HZ-OT9M"
+      "categoriaId": 1,
+      "titulo": "Invasão Zumbi",
+      "url": "https://www.youtube.com/watch?v=kz07hucUP1U"
     },
     {
       "id": 5,
       "categoriaId": 1,
-      "titulo": "CEMITÉRIO MALDITO",
-      "url": "https://www.youtube.com/watch?v=VllcgXSIJkE"
+      "titulo": "O Lobisomen",
+      "url": "https://www.youtube.com/watch?v=YgsyMMRBujs&t=2s"
     },
     {
       "id": 6,
       "categoriaId": 1,
-      "titulo": "CEMITÉRIO MALDITO",
-      "url": "https://www.youtube.com/watch?v=VllcgXSIJkE"
+      "titulo": "Livrai-nos do Mal",
+      "url": "https://www.youtube.com/watch?v=g3LhRvCY2c8"
     },
     {
       "id": 7,
       "categoriaId": 2,
-      "titulo": "TOURIST TRAP - UM FILME BIZARRO E ESSENCIAL",
-      "url": "https://www.youtube.com/watch?v=_8P1l7wX2oM"
+      "titulo": "The Evil Within - Eu não consigo!",
+      "url": "https://www.youtube.com/watch?v=j0cfKRo7_Lk&t=660s"
     },
     {
       "id": 8,
-      "categoriaId": 3,
-      "titulo": "SÓ RELATOS DE LOBISOMENS (PRINCIPALMENTE NA QUARESMA!) - COLETÂNEA TEMÁTICA",
-      "url": "https://www.youtube.com/watch?v=J5s3HZ-OT9M"
+      "categoriaId": 2,
+      "titulo": "Outlast - Não pensa no diabo!",
+      "url": "https://www.youtube.com/watch?v=A1xKX0TDdC4"
     },
     {
       "id": 9,
-      "categoriaId": 1,
-      "titulo": "CEMITÉRIO MALDITO",
-      "url": "https://www.youtube.com/watch?v=VllcgXSIJkE"
+      "categoriaId": 2,
+      "titulo": "Until Dawn - Até o Amanhecer",
+      "url": "https://www.youtube.com/watch?v=sTDO8ayp_qo"
     },
     {
       "id": 10,
-      "categoriaId": 1,
-      "titulo": "CEMITÉRIO MALDITO",
-      "url": "https://www.youtube.com/watch?v=VllcgXSIJkE"
+      "categoriaId": 2,
+      "titulo": "Alien: Isolation - Videogame não da medoOoAAhhh!",
+      "url": "https://www.youtube.com/watch?v=QBo_1aRBBe4"
     },
     {
       "id": 11,
-      "categoriaId": 2,
-      "titulo": "TOURIST TRAP - UM FILME BIZARRO E ESSENCIAL",
-      "url": "https://www.youtube.com/watch?v=_8P1l7wX2oM"
+      "categoriaId": 3,
+      "titulo": "Quem é Sarah Bellows?",
+      "url": "https://www.youtube.com/watch?v=sfkSwpEfxMw"
     },
     {
       "id": 12,
       "categoriaId": 3,
-      "titulo": "SÓ RELATOS DE LOBISOMENS (PRINCIPALMENTE NA QUARESMA!) - COLETÂNEA TEMÁTICA",
-      "url": "https://www.youtube.com/watch?v=J5s3HZ-OT9M"
+      "titulo": "Saga Uma Noite de Crime",
+      "url": "https://www.youtube.com/watch?v=KTtR8maDFbY"
     },
     {
-      "titulo": "Video Padrão",
-      "url": "https://www.youtube.com/watch?v=BkEk7C14ONE",
-      "categoriaId": 1,
-      "id": 13
-    },
-    {
-      "titulo": "Video Padrão2",
-      "url": "https://www.youtube.com/watch?v=BkEk7C14ONE",
-      "categoriaId": 1,
-      "id": 14
-    },
-    {
-      "titulo": "Video Padrão",
-      "url": "https://www.youtube.com/watch?v=BkEk7C14ONE",
-      "categoriaId": 1,
-      "id": 15
-    },
-    {
-      "titulo": "Video Padrão",
-      "url": "https://www.youtube.com/watch?v=BkEk7C14ONE",
-      "id": 16
-    },
-    {
-      "titulo": "Video Padrão",
-      "url": "https://www.youtube.com/watch?v=BkEk7C14ONE",
-      "categoriaId": {
-        "id": 2,
-        "titulo": "Vale a pena?",
-        "descricao": "análise dos filmes lançados",
-        "cor": "#333"
-      },
-      "id": 17
-    },
-    {
-      "titulo": "Video Padrão",
-      "url": "https://www.youtube.com/watch?v=BkEk7C14ONE",
-      "categoriaId": 1,
-      "id": 18
-    },
-    {
-      "titulo": "Video Padrão",
-      "url": "https://www.youtube.com/watch?v=BkEk7C14ONE",
-      "categoriaId": 1,
-      "id": 19
-    },
-    {
-      "titulo": "Video Padrão",
-      "url": "https://www.youtube.com/watch?v=BkEk7C14ONE",
+      "id": 13,
       "categoriaId": 3,
-      "id": 20
+      "titulo": "Saga Jogos Mortais",
+      "url": "https://www.youtube.com/watch?v=t11cEShJlvQ"
     },
     {
-      "titulo": "Video Padrão",
-      "url": "https://www.youtube.com/watch?v=BkEk7C14ONE",
-      "categoriaId": 1,
-      "id": 21
+      "id": 14,
+      "categoriaId": 3,
+      "titulo": "Saga A Hora do Pesadelo",
+      "url": "https://www.youtube.com/watch?v=hoq6pRHfnd0"
     },
     {
-      "titulo": "Video Padrão",
-      "url": "https://www.youtube.com/watch?v=BkEk7C14ONE",
-      "categoriaId": 2,
-      "id": 22
-    },
-    {
-      "titulo": "Video Padrão",
-      "url": "https://www.youtube.com/watch?v=BkEk7C14ONE",
-      "categoriaId": 1,
-      "id": 23
-    },
-    {
-      "titulo": "Video Padrão",
-      "url": "https://www.youtube.com/watch?v=BkEk7C14ONE",
-      "categoriaId": 1,
-      "id": 24
-    },
-    {
-      "titulo": "Thiago Ventura I Especial Isso é Tudo Que Eu Tenho",
-      "url": "https://www.youtube.com/watch?v=Q3MRZKW2Llk",
+      "id": 15,
       "categoriaId": 4,
-      "id": 25
+      "titulo": "VÁRIAS HISTÓRIAS DE LOBISOMENS RONDANDO CASAS.",
+      "url": "https://www.youtube.com/watch?v=aex_ca2R0pc"
+    },
+    {
+      "id": 16,
+      "categoriaId": 4,
+      "titulo": "SÓ RELATOS DE NECROTÉRIOS!",
+      "url": "https://www.youtube.com/watch?v=LTFg_L2hVxo"
+    },
+    {
+      "id": 17,
+      "categoriaId": 4,
+      "titulo": "SÓ RELATOS QUE ACONTECERAM EM ÉPOCA DE QUARESMA",
+      "url": "https://www.youtube.com/watch?v=mPTB21zvjvc"
+    },
+    {
+      "id": 18,
+      "categoriaId": 4,
+      "titulo": "UM DOS RELATOS MAIS LOUCOS DO CANAL",
+      "url": "https://www.youtube.com/watch?v=IM443s40w8k"
     }
   ]
 }
